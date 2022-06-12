@@ -64,20 +64,30 @@ router.get('/enroll', (ctx) => {
   flag_2 = uPattern_b.test(len_2);
   console.log('flag_2: ', flag_2);
   const len_3 = password_b;
-  flag_3 = len_3 === len_2 ? true : flase;
+  flag_3 = len_3 === len_2 ? true : false;
   console.log('flag_3: ', flag_3);
+  let feedBack='';
   if (!flag_1) {
-    ctx.response.body = '用户名不符合要求';
+    feedBack+='错误原因:\n用户名不符合要求';
   }
   if (!flag_2) {
-    ctx.response.body = '密码输入格式错误';
+    if(!feedBack){
+      feedBack+='错误原因:\n密码输入格式错误';
+    }else{
+      feedBack+='\n密码输入格式错误'
+    }
   }
   if (!flag_3) {
-    ctx.response.body = '密码输入不一致';
+    if(!feedBack){
+      feedBack+='错误原因:\n密码输入不一致';
+    }else{
+      feedBack+='\n密码输入不一致'
+    }
   }
   if (flag_1 && flag_2 && flag_3) {
-    ctx.response.body = '注册成功';
+    feedBack+='注册成功';
   }
+  ctx.response.body=feedBack;
 })
 
 
