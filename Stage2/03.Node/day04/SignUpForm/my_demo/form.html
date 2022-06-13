@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <title>登录客户端</title>
+
+<body>
+    <section>
+        <div class="box">
+            <!-- 背景圆 -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <!-- 登录框 -->
+            <div class="container">
+                <div class="form">
+                    <h2>用户注册</h2>
+                    <form id="loginform" name="form1" method="get" action="http://localhost:1998/finalFeed">
+                        <div class="inputBox remind_box">
+                            <input type="text" placeholder="账户" class="username remind_input" name="username">
+
+                        </div>
+                        <div class="inputBox remind_box2">
+                            <input type="password" placeholder="密码" class="password remind_input2 cipher_a" name="password_a">
+
+                        </div>
+                        <div class="inputBox remind_box3">
+                            <input type="password" placeholder="请重新输入密码" class="password remind_input3 cipher_b" name="password_b">
+
+                        </div>
+                        <div class="inputBox">
+                            <button class="btn" disabled>注册</button>
+                        </div>
+                        <p class="forget">已有账户?<a href="#">
+                                登录
+                            </a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./form.js"></script>
+</body>
+</html>
