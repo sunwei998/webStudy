@@ -1,0 +1,30 @@
+{% extends "layout.njk" %}
+
+{% block style %}
+    <link rel='stylesheet', href='/css/access.css'>
+{% endblock %}
+
+{% block content %}
+    <div class='container'>
+        <div class='welcome'>
+        注册成功
+        </div>
+        <div class='title_item'>
+            {{username}},欢迎您的加入👏👏👏!
+        </div>
+
+        <div class='age_item'>
+        您的年龄是{{age}}岁🎂🎂🎂!
+        </div>
+
+        <div class='sex_item'>
+        您的性别是:
+        {% if sex === 1 %}
+        男👨!
+        {% else %}
+        女👩!
+        {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

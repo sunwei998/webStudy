@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <title>用户注册</title>
+
+<body>
+    <section>
+        <div class="box">
+            <!-- 背景圆 -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <!-- 登录框 -->
+            <div class="container">
+                <div class="form">
+                    <h2>用户注册</h2>
+                    <form id="loginform" name="form1">
+                        <div class="inputBox remind_box">
+                            <input type="text" placeholder="Username" class="username remind_input" name="username">
+
+                        </div>
+                        <div class="inputBox remind_box2">
+                            <input type="password" placeholder="Password" class="password remind_input2 cipher_a" name="password_a">
+                        </div>
+                        <div class="inputBox remind_box3">
+                            <input type="password" placeholder="Confirm the password" class="password remind_input3 cipher_b" name="password_b">
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Age" class="age">
+                        </div>
+                        <div class="checkbox1">
+                            Sex:&nbsp;&nbsp;<input type="radio" name="sex" value="1" onclick="check(this.value)"/> Male&nbsp;&nbsp;
+                            <input type="radio" name="sex" value="0" onclick="check(this.value)"/> Female
+                            
+                        </div>
+                        <div class="inputBox">
+                            <button class="btn" disabled type="button">Register</button>
+                        </div>
+                        <p class="forget">Have possessed an account?<a href="#">
+                                Login →
+                            </a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./form.js"></script>
+</body>
+</html>
