@@ -1,6 +1,9 @@
 body{
     font-family: "Avant Garde", "Tahoma", "Microsoft YaHei", "SimHei";
     background: rgb(1, 86, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .container{
     background-color: black;
@@ -9,7 +12,8 @@ body{
     border-radius: 16%;
     border: 10px solid #be9f22;
     padding: 30px 50px;
-    margin: 200px auto;
+    /* margin: 150px auto; */
+    margin-bottom: 20px;
     box-shadow: 0 0 10px 10px #ccc;
 }
 .welcome{
@@ -21,4 +25,22 @@ body{
     color: #be9f22;
     margin: 10px 0px;
     font-size: 24px;
+}
+.order{
+    color: #be9f22;
+    padding: 30px 50px;
+    font-size: 24px;
+    width: 200px;
+    height: fit-content;
+    background-color: black;
+    /* margin: 30px auto; */
+    border-radius: 16%;
+    border: 10px solid #be9f22;
+    box-shadow: 0 0 10px 10px #ccc;
+}
+.item_order{
+    margin-bottom: 10px;
+}
+.change_opacity{
+    opacity: 0.4;
 }

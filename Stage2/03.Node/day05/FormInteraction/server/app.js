@@ -54,7 +54,29 @@ router.get('/', async (ctx, next) => {
 
 router.get('/userinfo', async(ctx)=>{ 
   const{username,age,sex}=ctx.request.query;
-  await ctx.render('access',{username,age,sex});
+  const foods = [
+    { 
+      id:1,
+      name:'food1',
+      available:true
+    },
+    { 
+      id:2,
+      name:'food2',
+      available:false
+    },
+    { 
+      id:3,
+      name:'food3',
+      available:true
+    },
+    { 
+      id:4,
+      name:'food4',
+      available:true
+    }
+  ];
+  await ctx.render('access',{username,age,sex,foods});
 });
 
 // ? 用户名重名检测

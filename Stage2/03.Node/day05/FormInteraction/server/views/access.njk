@@ -19,7 +19,7 @@
 
         <div class='sex_item'>
         您的性别是:
-        {% if sex === 1 %}
+        {% if sex === '1' %}
         男👨!
         {% else %}
         女👩!
@@ -27,4 +27,20 @@
         </div>
     </div>
 
-{% endblock %}
+    <div class='order'>
+        {% for item in foods %}
+            {% if item.available %}
+                <div class='item_order'>
+                    {{item.id}}
+                    {{item.name}}
+                </div>
+            {% else %}
+                <div class='item_order change_opacity'>
+                    {{item.id}}
+                    {{item.name}}
+                </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+    {% endblock %}
