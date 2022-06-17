@@ -1,0 +1,25 @@
+body{
+    font-family: "Avant Garde", "Tahoma", "Microsoft YaHei", "SimHei";
+    background: rgb(1, 86, 1);
+}
+.container{
+    background-color: black;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 16%;
+    border: 10px solid #be9f22;
+    padding: 30px 50px;
+    margin: 150px auto;
+    box-shadow: 0 0 10px 10px #ccc;
+}
+.welcome{
+    color: #be9f22;
+    font-size: 28px;
+}
+.title_item,.age_item,.sex_item{
+    /* text-align: center; */
+    color: #be9f22;
+    margin: 15px 0px;
+    font-size: 36px;
+    font-weight: bold;
+}

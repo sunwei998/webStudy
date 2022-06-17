@@ -1,0 +1,41 @@
+{% extends 'layout.njk' %}
+{% block style %}
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+    <link rel='stylesheet', href='/css/userinfoRegist.css'>
+{% endblock %}
+
+{% block content %}
+<section>
+        <div class="box">
+            <!-- 背景圆 -->
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <!-- 登录框 -->
+            <div class="container">
+                <div class="form">
+                    <h3>Personal Information</h3>
+                    {# <form id="loginform" name="form1"> #}
+                        <div class="inputBox userAge">
+                            <input type="text" placeholder="Age" class="age">
+                        </div>
+                        <div class="checkbox1">
+                            Sex:&nbsp;&nbsp;<input type="radio" name="sex" value="1" onclick="setData('sex',this.value)"/> Male&nbsp;&nbsp;
+                            <input type="radio" name="sex" value="0" onclick="setData('sex',this.value)"/> Female
+                            
+                        </div>
+                        <div class="inputBox">
+                            <button class="btn">Regist</button>
+                        </div>
+                    {# </form> #}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block script %}
+<script src="js/userinfoRegist.js"></script>
+{% endblock %}
