@@ -1,0 +1,30 @@
+{
+  "id": "3438021",
+  "name": "课堂练习",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1727524",
+      "name": "304错误、关闭、取消-方框",
+      "font_class": "cuowuguanbiquxiao-fangkuang",
+      "unicode": "e8e8",
+      "unicode_decimal": 59624
+    },
+    {
+      "icon_id": "8312527",
+      "name": "通过",
+      "font_class": "tongguo",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "936705",
+      "name": "感叹号",
+      "font_class": "gantanhao",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

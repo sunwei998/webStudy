@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{% block style %}
+    <link rel='stylesheet', href='/css/main.css'>
+{% endblock %}
+
+{% block content %}
+    <div class='container'>
+        <div class='title_item'>
+            Login Successfully!
+        </div>
+
+        <div class='welcome'>
+       You Are Welcome! <br>
+        Dear &nbsp;{{person}}!
+        </div>
+    </div>
+
+    <div class='male'>
+        <h3>male</h3>
+            <div class='item'>
+       {{male}}
+            </div>
+        {# {% for item in male %}
+                <div class='item_order'>
+                   username: {{item.name}}
+                    Password:{{item.password}}
+                    Age:{{item.age}}
+                    sex:{{item.sex}}
+                </div>
+            {% endfor %} #}
+
+        </div>
+        <div class='female'>
+         <h3>female</h3>
+            <div class='item'>
+                {{female}}
+            </div>
+        </div>
+    {% endblock %}
