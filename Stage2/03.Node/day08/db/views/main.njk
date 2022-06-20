@@ -19,22 +19,26 @@
     <div class='male'>
         <h3>male</h3>
             <div class='item'>
-       {{male}}
             </div>
-        {# {% for item in male %}
+        {% for item in male %}
                 <div class='item_order'>
                    username: {{item.name}}
                     Password:{{item.password}}
                     Age:{{item.age}}
                     sex:{{item.sex}}
                 </div>
-            {% endfor %} #}
+            {% endfor %}
 
         </div>
         <div class='female'>
          <h3>female</h3>
-            <div class='item'>
-                {{female}}
-            </div>
+            {% for item in female %}
+                <div class='item_order'>
+                   username: {{item.name}}
+                    Password:{{item.password}}
+                    Age:{{item.age}}
+                    sex:{{item.sex}}
+                </div>
+            {% endfor %}
         </div>
     {% endblock %}

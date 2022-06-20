@@ -141,6 +141,7 @@ router.get('/loginPage', async (ctx) => {
 router.get('/successPage', async (ctx) => {
   let male= await userModel.find({ sex:1 });
   console.log('male: ', typeof male);
+  console.log('helloArray',male[0]);
   let female= await userModel.find({ sex:0 })
   let usr = ctx.cookies.get('user');
   let person = jsonPare(decodeURIComponent(usr)).name;
@@ -199,8 +200,8 @@ router.get('/checkLogin', async(ctx) => {
   const yyt = await userModel. findOne({ name , password });
   ctx.response.body = yyt;
   if (yyt) {
-    ctx.cookies.set('user', encodeURIComponent(JSON.stringify({ name: name })), { maxAge: 60 * 1000 });
-    ctx.cookies.set('pass', encodeURIComponent(JSON.stringify({ password: password })), { maxAge: 60 * 1000 })
+    ctx.cookies.set('user', encodeURIComponent(JSON.stringify({ name: name })), { maxAge: 3 * 60 * 1000 });
+    ctx.cookies.set('pass', encodeURIComponent(JSON.stringify({ password: password })), { maxAge: 3 * 60 * 1000 })
   }
 }
 )
