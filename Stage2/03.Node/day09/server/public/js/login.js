@@ -4,7 +4,7 @@ btnEle.onclick = () => {
   console.log('in')
   $.ajax({
     type: 'get',
-    url: 'http://localhost:3000/checkLogin',
+    url: '/checkLogin',
     data: {
       name: $('.username').val(),
       password: $('.password').val()
@@ -25,7 +25,7 @@ btnEle.onclick = () => {
           warningEle.remove()
         }
 
-        location.href='http://localhost:3000/chat'
+        location.href='/chat'
                 // alert('hello')
       }
     }
