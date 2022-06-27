@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Rank.css">
+</head>
+
+<body>
+    <div id="app">
+        <table class="rankSheet" cellspacing="0px">
+            <caption>
+                <h2>列表渲染</h2>
+            </caption>
+            <tr class="item_title">
+                <td></td>
+                <td v-for="item in titles">
+                    {{item}}
+                </td>
+            </tr>
+            <tr v-for="(item,index) in list" :class="['item_box',{item_color : index%2===0}]">
+                <td class="image_box">
+                    <img src="./champion.png" alt="" width="30px" height="30px" v-if="index===0">
+                    <img src="./second.png" alt="" width="30px" height="30px" v-if="index===1">
+                    <img src="./third.png" alt="" width="30px" height="30px" v-if="index===2">
+                </td>
+                <td>{{item.name}}</td>
+                <template v-for="val in item.score">
+                    <td v-for="v in val">
+                        {{v}}
+                    </td>
+                    <td>
+                        {{val.math+val.chinese+val.english+val.geography+val.history}}
+                    </td>
+                </template>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./Rank.js"></script>
+</body>
+
+</html>

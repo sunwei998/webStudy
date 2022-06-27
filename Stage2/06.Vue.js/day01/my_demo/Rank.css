@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+ background-color: rgb(2, 95, 2);
+}
+.rankSheet {
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
+h2{
+    color: #be9f22;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.rankSheet tr{
+    background-color: black;
+    color: #be9f22;
+    font-size: 14px;
+}
+.rankSheet .item_title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.rankSheet td {
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.rankSheet .item_color {
+    background-color: #be9f22;
+    color: black;
+}
+.image_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
