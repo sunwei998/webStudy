@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Todolist.css">
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="box">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+
+                <div class="containerBox">
+                    <div class="inputBox">
+                        <div class="title">
+                            <h2>To Do List</h2>
+                        </div>
+                        <div class="creatButton">
+                            <input type="text" class='add-input' placeholder="任务名" v-model.trim='val' @keyup.enter='addTask'>
+                            <button class="add-btn" @click="addTask">Add</button>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div v-for="(item,index) in list" :class="['task-item' , { status : item.checked}]" @click="changeStatus(index)">
+                            <div class="flag_img" v-show=item.checked>
+                                <img src="./flag.png" alt="" width="32px">
+                            </div>
+                            <div class="task-name">
+                                {{ item.name }}
+                            </div>
+                            <div class="cancel-button" @click.stop="cancelTask(index)">
+                                <img src="./cancel.png" alt="" width="24px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./Todolist.js"></script>
+</body>
+
+</html>

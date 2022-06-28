@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            用户名<input type="text" v-model="val" @blur="checkNme">
+        </div>
+        <div>
+            <button :disabled='isDisabled' @click="submit">提交</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let vm = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    val: '',
+                    isDisabled: true
+
+                }
+
+            },
+            methods: {
+                checkNme() {
+                    if (this.val) {
+                        if (this.val === 'isen') {
+                            alert('isen用户名已存在')
+                        } else {
+                            this.isDisabled = false
+                        }
+
+                    }else{
+                        this.isDisabled = true
+                    }
+                },
+                submit() {
+                    alert('成功')
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

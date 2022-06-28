@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./settlement.css">
+</head>
+
+<body>
+    <section id="app">
+        <div class="box">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="container">
+                <div v-for="(item,index) in list" class="list-item">
+                    <div>
+                        {{ item.name }}
+                    </div>
+                    <div class="price-container">
+                        <div class="item_price">{{ item.price | currencyRMB }}</div>
+                        <button @click="sub(index)">-</button>
+        
+                        <div>{{item.count}}</div>
+                        <button @click="add(index)">+</button>
+                    </div>
+                </div>
+        <div class="total_price">总价:{{ total | currencyRMB }}</div>
+
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./settlement.js"></script>
+</body>
+
+</html>

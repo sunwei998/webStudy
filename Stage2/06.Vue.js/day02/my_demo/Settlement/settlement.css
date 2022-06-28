@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+ 
+/* 使用flex布局，让内容垂直和水平居中 */
+ 
+section {
+    /* 相对定位 */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* linear-gradient() 函数用于创建一个表示两种或多种颜色线性渐变的图片 */
+    background-image: linear-gradient(to right, #4c53d1 0%, #a981bb 30%, #ffc8a9 100%);
+}
+ 
+
+.box {
+    position: relative;
+	border-radius: 10px;
+}
+ 
+/* 背景圆样式 */
+ 
+.box .circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    /* backdrop-filter属性为一个元素后面区域添加模糊效果 */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    filter: hue-rotate(calc(var(--x) * 70deg));
+    animation: animate 10s linear infinite;
+    animation-delay: calc(var(--x) * -1s);
+}
+ 
+/* 背景圆动画 */
+ 
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+}
+ 
+.box .circle:nth-child(1) {
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+ 
+.box .circle:nth-child(2) {
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+ 
+.box .circle:nth-child(3) {
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+ 
+.box .circle:nth-child(4) {
+    bottom: -80px;
+    left: 100px;
+    width: 60px;
+    height: 60px;
+}
+ 
+.box .circle:nth-child(5) {
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}
+ 
+/* 登录框样式 */
+ 
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 0px 20px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.list-item{
+    display: flex;
+    width: 300px;
+    height: 30px;
+    justify-content:space-between;
+    align-items:center;
+}
+.price-container{
+    display: flex;
+    width: 120px;
+    height:100%;
+    justify-content: space-between;
+    align-items:center;
+}
+.total_price{
+    margin-top: 30px;
+}
+.item_price{
+    margin-right: 20px;
+}
+button{
+    /* background: #fff; */
+    /* color: #666; */
+    font-size: 14px;
+    font-weight: 600;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    /* padding: 5px 8px; */
+    background-color: #d53f22;
+    border-radius: 20%;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
