@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list-item{
+            display:flex;
+            width:200px;
+            height:30px;
+            justify-content:space-between;
+            align-items:center;
+        }
+        .checked{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <headera @add-task="addTaskHandler"></headera>
+
+        <list-item v-for="(item,index) in list" :key="item.id" :item="item"
+            :index="index"
+            @check="check"
+            @remove="remove"
+        ></list-item>
+    </div>
+    <headera @add-task="addTaskHandler"></headera>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="./index.js"></script>
+</body>
+</html>
